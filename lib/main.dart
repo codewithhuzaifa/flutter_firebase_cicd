@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter CICD  mndcbcndcbncn c jsbcnsbdc'),
+      home: const MyHomePage(title: 'Flutter CICD  mxsxxsndcbcndcbncn c jsbcnsbdc'),
     );
   }
 }
