@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(
-          title: 'Flutter CICD with App Firebase Distribution'),
+      home: const MyHomePage(title: 'Flutter CICD with App Firebase'),
     );
   }
 }
