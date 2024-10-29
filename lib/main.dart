@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  static const platform = MethodChannel('com.example.firebase_app_distribution/feedback');
+  static const platform = MethodChannel('com.example.app/feedback');
 
   Future<void> sendFeedback() async {
     try {
@@ -57,7 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: sendFeedback, icon: const Icon(Icons.abc))
+          IconButton(
+              onPressed: () {
+                sendFeedback();
+              },
+              icon: const Icon(Icons.abc))
         ],
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
