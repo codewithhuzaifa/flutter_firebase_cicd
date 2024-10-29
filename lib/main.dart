@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter cicd',
+      title: 'Flutter Firebase App Distribution With Google Console',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter github hjdhjjdsh'),
+      home: const MyHomePage(
+          title: 'Flutter Firebase App Distribution With Google Console'),
     );
   }
 }
