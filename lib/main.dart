@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,11 +41,24 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  static const platform = MethodChannel('com.example.firebase_app_distribution/feedback');
+
+  Future<void> sendFeedback() async {
+    try {
+      await platform.invokeMethod('startFeedback');
+    } on PlatformException catch (e) {
+      debugPrint("Failed to start feedback: '${e.message}'.");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(onPressed: sendFeedback, icon: const Icon(Icons.abc))
+        ],
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
